@@ -1,0 +1,38 @@
+TipDialog {
+	background-color: #ffffff;
+	border-radius: 5px;
+}
+
+#buttonClose{
+	background-color: #1e6ceb;
+	color: #ffffff;
+	border: none;
+	border-radius: 2px;
+	font-family: AlibabaPuHuiTi;
+	font-size: 14px;
+}
+
+#labelHeader {
+  color: #38455d;
+  font-family: PingFangSC;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: left;
+  border: none;
+}
+
+#info {
+  background:transparent;
+  border: none;
+  color: #1e6ceb;
+  font-family: PingFangSC;
+  font-size: 14px;
+}
+
+#buttonCloseIcon {
+	width: 20px;
+	height: 20px;
+	border: none;
+
+	background-image: url(ICON/关闭.png);
+}

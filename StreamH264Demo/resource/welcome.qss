@@ -1,0 +1,54 @@
+WelcomeUI {
+	background-color: #1e6ceb;
+}
+
+#logo {
+	width: 339px;
+	height: 82px;
+	font-family: AlibabaPuHuiTi;
+	font-size: 60px;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: normal;
+	letter-spacing: normal;
+	text-align: left;
+	color: #ffffff;
+}
+
+#btnEnter {
+	width: 327px;
+	height: 40px;
+	
+	border-radius: 3px;
+    box-shadow: 0 4px 12px 0 rgba(76, 138, 239, 0.5);
+    border: 1px solid #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: white;
+}
+
+#btnClose, #btnMini{
+	width: 20px;
+	height: 20px;
+	border: none;
+	color:white;
+	font-weight:500;
+	font-size:16px;
+	background-repeat: no-repeat;
+}
+#btnMini {
+	/*background-image: url(ICON/最小化.png);*/
+}
+#btnClose {
+	/*background-image: url(ICON/关闭.png);*/
+}
+
+#splitLine{
+	background-color: #ffffff;
+	border: none;
+}

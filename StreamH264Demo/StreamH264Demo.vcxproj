@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1106A4A2-BDE3-4688-9518-B29A30A6A202}</ProjectGuid>
+    <Keyword>QtVS_v303</Keyword>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Debug|Win32'">10.0.18362.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Release|Win32'">10.0.18362.0</WindowsTargetPlatformVersion>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')">
+    <Import Project="$(QtMsBuild)\qt_defaults.props" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|Win32'">
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|Win32'">
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\..\rz-paas-sdk-msvc\rz-native-sdk\rz-paas-sdk\include;$(SolutionDir)..\..\rz-paas-sdk-msvc\rz-native-sdk\rz-paas-sdk\include\DataFlow;$(SolutionDir)..\..\rz-paas-sdk-msvc\rz-native-sdk\rz-paas-sdk\include\IChannel;$(SolutionDir)..\..\rz-paas-sdk-msvc\rz-native-sdk\rz-paas-sdk\include\MediaStream;$(SolutionDir)..\..\rz-paas-sdk-msvc\rz-native-sdk\rz-paas-sdk\include\ProcessInterface;$(SolutionDir)..\..\rz-paas-sdk-msvc\rz-native-sdk\rz-paas-sdk\include\third_party;$(SolutionDir)..\..\rz-paas-sdk-msvc\rz-native-sdk\rz-paas-sdk\include\third_party\libuv;$(SolutionDir)..\..\rz-paas-sdk-msvc\rz-native-sdk\rz-paas-sdk\include\third_party\ffmpeg;$(SolutionDir)..\..\rz-paas-sdk-msvc\rz-native-sdk\rz-paas-sdk\include\third_party\opus;$(SolutionDir)..\..\rz-paas-sdk-msvc\rz-native-sdk\rz-paas-sdk\include\third_party\yuv;$(SolutionDir)..\..\rz-paas-sdk-msvc\rz-native-sdk\rz-paas-sdk;$(SolutionDir)..\..\rz-paas-sdk-msvc\rz-native-sdk\rz-paas-sdk\OSModule;$(SolutionDir)..\..\rz-paas-sdk-msvc\rz-native-sdk\rz-native-sdk\third_party\videoinput;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>D:\git\rz-paas-sdk-msvc\rz-native-sdk\out\build\x86-Debug\rz-paas-sdk;D:\git\rz-paas-sdk-msvc\rz-native-sdk\rz-paas-sdk\lib\KMSVC\debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>PaaSSDK.lib;videoInputD.lib;libyuv.lib;libavcodec.a;libavdevice.a;libavfilter.a;libavformat.a;libavutil.a;libx264.lib;libswresample.a;bcrypt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|Win32'" Label="QtSettings">
+    <QtInstall>vs_2019_static</QtInstall>
+    <QtModules>core;gui;widgets</QtModules>
+    <QtBuildConfig>debug</QtBuildConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|Win32'" Label="QtSettings">
+    <QtInstall>vs_2019_static</QtInstall>
+    <QtModules>core;gui;widgets</QtModules>
+    <QtBuildConfig>release</QtBuildConfig>
+  </PropertyGroup>
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.props')">
+    <Import Project="$(QtMsBuild)\qt.props" />
+  </ImportGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|Win32'" Label="Configuration">
+    <ClCompile>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Release|Win32'" Label="Configuration">
+    <ClCompile>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <Optimization>MaxSpeed</Optimization>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="ChannelUI.cpp" />
+    <ClCompile Include="CustomVideoSink.cpp" />
+    <ClCompile Include="CustomVideoSource.cpp" />
+    <ClCompile Include="GLYuvWidget.cpp" />
+    <ClCompile Include="RTC.cpp" />
+    <ClCompile Include="MyChannelEventHandler.cpp" />
+    <ClCompile Include="slot.cpp" />
+    <ClCompile Include="SlotMgr.cpp" />
+    <ClCompile Include="VideoCapture.cpp" />
+    <ClCompile Include="VideoConvertor.cpp" />
+    <ClCompile Include="VideoDecoder.cpp" />
+    <ClCompile Include="WindowInterface.cpp" />
+    <ClCompile Include="YUV420P_Render.cpp" />
+    <QtRcc Include="StreamH264Demo.qrc" />
+    <QtUic Include="StreamH264Demo.ui" />
+    <QtMoc Include="WelcomeUI.h" />
+    <ClCompile Include="StreamH264Demo.cpp" />
+    <ClCompile Include="WelcomeUI.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="GLYuvWidget.h" />
+    <QtMoc Include="SlotMgr.h" />
+    <ClInclude Include="CustomVideoSink.h" />
+    <ClInclude Include="CustomVideoSource.h" />
+    <ClInclude Include="MyChannelEventHandler.h" />
+    <ClInclude Include="VideoCapture.h" />
+    <ClInclude Include="VideoConvertor.h" />
+    <ClInclude Include="VideoDecoder.h" />
+    <ClInclude Include="YUV420P_Render.h" />
+    <QtMoc Include="ChannelUI.h" />
+    <ClInclude Include="RTC.h" />
+    <ClInclude Include="SingletonGC.h" />
+    <ClInclude Include="StreamH264Demo.h" />
+    <ClInclude Include="WindowInterface.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

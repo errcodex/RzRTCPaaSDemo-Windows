@@ -1,0 +1,19 @@
+ChannelUI {
+	background-color: #f7f8fa;
+}
+
+#btnClose, #btnMini{
+	width: 20px;
+	height: 20px;
+	border: none;
+	color: #1e6ceb;
+	font-weight:500;
+	font-size:16px;
+	background-repeat: no-repeat;
+}
+#btnMini {
+	/*background-image: url(ICON/最小化.png);*/
+}
+#btnClose {
+	/*background-image: url(ICON/关闭.png);*/
+}
